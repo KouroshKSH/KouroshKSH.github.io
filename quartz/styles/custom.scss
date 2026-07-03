@@ -1,3 +1,66 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+:root {
+  --persian-red: #8b2635;
+  --persian-red-dim: #5c1a24;
+  --persian-red-bright: #a63446;
+}
+
+body {
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+::selection {
+  background: var(--persian-red);
+  color: #ffffff;
+}
+
+.page {
+  #quartz-body {
+    max-width: 80ch;
+    margin: 0 auto;
+  }
+}
+
+// Old Persian: fallback to system historic fonts if web font unavailable
+.cuneiform {
+  display: block;
+  font-family: "Noto Sans Old Persian", "Segoe UI Historic", serif;
+  font-size: 1.1rem;
+  color: var(--gray);
+  margin-top: -0.5rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+.hero-sigil {
+  display: block;
+  max-width: 280px;
+  margin: 0 auto 2rem;
+  image-rendering: pixelated;
+}
+
+blockquote {
+  border-left: 3px solid var(--persian-red);
+  background: rgba(139, 38, 53, 0.06);
+  padding-left: 1rem;
+  margin-left: 0;
+}
+
+a:hover {
+  color: var(--persian-red-bright);
+}
+
+hr {
+  border-color: var(--lightgray);
+}
+
+article[data-slug="index"] ~ .sidebar.right,
+body[data-slug="index"] .sidebar.right {
+  display: none;
+}
+
+.callout[data-callout="quote"] {
+  --color: var(--persian-red);
+  --border: var(--persian-red-dim);
+}
