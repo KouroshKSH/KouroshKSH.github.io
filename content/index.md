@@ -7,7 +7,7 @@ description: ML engineer and researcher. Technical notes on AI, systems, and sci
 
 <span class="cuneiform">𐎠𐎥𐎥𐎠𐎥</span>
 
-![Achaemenid eagle sigil](/static/eagle-placeholder.svg){.hero-sigil}
+<img src="/static/eagle.png" alt="Achaemenid eagle sigil" class="hero-sigil" width="280" height="280" />
 
 ML Master's student at University of Tübingen. ML Engineer at Heimat Software GmbH.
 Passionate about AI for scientific discovery and real-world systems.

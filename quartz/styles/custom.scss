@@ -15,14 +15,18 @@ body {
   color: #ffffff;
 }
 
-.page {
-  #quartz-body {
-    max-width: 80ch;
-    margin: 0 auto;
-  }
+// Limit reading width on article content only — NOT on #quartz-body grid
+// (80ch on the grid crushes the center column between 320px sidebars)
+.page > #quartz-body .center {
+  max-width: 80ch;
 }
 
-// Old Persian: fallback to system historic fonts if web font unavailable
+.page > #quartz-body .center > article,
+.page > #quartz-body .center > .page-header {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .cuneiform {
   display: block;
   font-family: "Noto Sans Old Persian", "Segoe UI Historic", serif;
@@ -53,11 +57,6 @@ a:hover {
 
 hr {
   border-color: var(--lightgray);
-}
-
-article[data-slug="index"] ~ .sidebar.right,
-body[data-slug="index"] .sidebar.right {
-  display: none;
 }
 
 .callout[data-callout="quote"] {
