@@ -1,4 +1,4 @@
-![𐎠𐎥𐎥𐎠𐎥](quartz/static/eagle_static_banner.png)
+![𐎠𐎥𐎥𐎠𐎥](quartz/static/eagle_red.gif)
 
 *Dorood.* ML Master's student at the University of Tübingen and ML Engineer at Heimat Software GmbH. B.Sc. in Computer Science with a minor in Mathematics from Sabancı University.
 
