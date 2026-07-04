@@ -4,8 +4,8 @@ description: Dense vectors, similarity search, and RAG-style pipelines.
 date: 2025-07-01
 tags:
   - ML
-  - NLP
-  - Retrieval
+  - nlp
+  - retrieval
 draft: false
 ---
 

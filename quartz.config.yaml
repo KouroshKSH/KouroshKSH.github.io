@@ -208,12 +208,7 @@ plugins:
   - source: github:quartz-community/footer
     enabled: true
     options:
-      links:
-        GitHub: https://github.com/KouroshKSH
-        LinkedIn: https://linkedin.com/in/kouroshsharifi
-        Scholar: https://scholar.google.com/citations?user=JKDX3nwAAAAJ&hl=en
-        CV: https://drive.google.com/drive/folders/1QEZ-ZxnaxAHb7byMuFl8u97vk6nPfA84?usp=drive_link
-        Linktree: https://linktr.ee/kourosh.sharifi
+      links: {}
   - source: github:quartz-community/recent-notes
     enabled: true
     options:

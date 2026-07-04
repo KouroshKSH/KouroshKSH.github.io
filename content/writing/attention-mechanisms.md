@@ -4,8 +4,8 @@ description: Scaled dot-product attention and why it works.
 date: 2025-06-15
 tags:
   - ML
-  - Transformers
-  - Math
+  - transformers
+  - math
 draft: false
 ---
 

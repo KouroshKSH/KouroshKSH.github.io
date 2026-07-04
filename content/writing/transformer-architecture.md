@@ -4,8 +4,8 @@ description: A high-level map of the transformer family and how the pieces conne
 date: 2025-06-01
 tags:
   - ML
-  - Transformers
-  - Deep-Learning
+  - transformers
+  - deep_learning
 draft: false
 ---
 
