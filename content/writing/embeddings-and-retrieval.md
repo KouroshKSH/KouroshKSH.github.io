@@ -41,4 +41,4 @@ Common approaches:
 
 This note sits in a small graph with [[transformer-architecture|Transformer Architecture]] and [[attention-mechanisms|Attention Mechanisms]]. Toggle the **graph view** in the sidebar to see how they connect.
 
-← [[writing/index|All writing]]
+<- [[writing/index|All writing]]

@@ -48,4 +48,4 @@ def scaled_dot_product_attention(q, k, v):
 - [[transformer-architecture]]
 - [[embeddings-and-retrieval]]
 
-← [[writing/index|All writing]]
+<- [[writing/index|All writing]]

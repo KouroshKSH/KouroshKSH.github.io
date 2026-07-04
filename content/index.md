@@ -8,19 +8,19 @@ description: ML engineer and researcher.
 <img src="/static/eagle_red_light.gif" alt="Achaemenid eagle sigil" class="landing-hero-gif landing-hero-gif-light" />
 </div>
 
-*Dorood.* My name is Kourosh Sharifi, ML Master's student at University of Tübingen and ML Engineer at Heimat Software GmbH.
+_Dorood._ My name is Kourosh Sharifi, ML Master's student at University of [Tübingen](https://uni-tuebingen.de/en/study/finding-a-course/degree-programs-available/detail/course/machine-learning-master/) and ML Engineer at [Heimat](https://heimat-software.com/) Software GmbH.
 
 [GitHub](https://github.com/KouroshKSH) · [LinkedIn](https://linkedin.com/in/kouroshsharifi) · [Google Scholar](https://scholar.google.com/citations?user=JKDX3nwAAAAJ&hl=en) · [CV](https://drive.google.com/drive/folders/1QEZ-ZxnaxAHb7byMuFl8u97vk6nPfA84?usp=drive_link) · [Linktree](https://linktr.ee/kourosh.sharifi)
 
 ## Writing
 
-Technical notes on ML and systems.
+Technical notes (mostly ML):
 
-→ [[writing/index|All notes]]
+-> [[writing/index|All notes]]
 
 ## Experience
 
-→ [[experience|Work & background]]
+-> [[experience|Work, education & background]]
 
 ## Publications
 

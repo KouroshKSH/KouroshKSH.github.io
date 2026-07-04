@@ -13,4 +13,4 @@ Notes on ML, systems, and topics I'm exploring. Use the graph view (top-right on
 - [[attention-mechanisms|Attention Mechanisms]]
 - [[embeddings-and-retrieval|Embeddings and Retrieval]]
 
-← [[index|Home]]
+<- [[index|Home]]

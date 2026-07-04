@@ -25,10 +25,24 @@ Before diving into details, read my note on [[attention-mechanisms|Attention Mec
 
 ## Stack at a Glance
 
-```text
-Input tokens → Embedding + Positional encoding
-            → [Attention → FFN] × N layers
-            → Output head (LM, classification, etc.)
+```mermaid
+graph TD
+    %% Node Definitions
+    A[Input Tokens] --> B[Embedding Layer]
+    C[Positional Encoding] --> D[Combine: Embedding + Position]
+    B --> D
+    
+    %% Stacked Layers Loop
+    subgraph Stack[Stacked Blocks × N Layers]
+        D --> E[Self-Attention]
+        E --> F[Feed-Forward Network - FFN]
+    end
+    
+    %% Output
+    F --> G[Output Head]
+    
+    %% Styling
+    style Stack fill:#f9f9f9,stroke:#333,stroke-width:2px,stroke-dasharray: 5 5
 ```
 
 ## Related
@@ -36,4 +50,4 @@ Input tokens → Embedding + Positional encoding
 - [[attention-mechanisms]]
 - [[embeddings-and-retrieval]]
 
-← [[writing/index|All writing]]
+<- [[writing/index|All writing]]
