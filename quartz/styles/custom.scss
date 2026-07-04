@@ -41,7 +41,18 @@ body {
   height: auto;
   display: block;
   image-rendering: pixelated;
-  border-radius: 4px;
+}
+
+.landing-hero-gif-light {
+  display: none;
+}
+
+:root[saved-theme="light"] .landing-hero-gif-dark {
+  display: none;
+}
+
+:root[saved-theme="light"] .landing-hero-gif-light {
+  display: block;
 }
 
 footer .footer-cuneiform,
