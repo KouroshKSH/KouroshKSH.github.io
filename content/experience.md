@@ -60,7 +60,7 @@ Co-founded SabancÄ± University's first official AI/ML club. Secured NVIDIA, VERÄ
 - [GitHub](https://github.com/KouroshKSH)
 - [LinkedIn](https://linkedin.com/in/kouroshsharifi)
 - [CV](https://drive.google.com/drive/folders/1QEZ-ZxnaxAHb7byMuFl8u97vk6nPfA84?usp=drive_link)
-- [Google Scholar](https://scholar.google.com/citations?user=JKDX3nwAAAAJ&hl=en)
+- [Google Scholar](https://scholar.google.com/citations?user=xSJ_bIYAAAAJ&hl=en)
 - [Linktree](https://linktr.ee/kourosh.sharifi)
 
 <- [[index|home]]
