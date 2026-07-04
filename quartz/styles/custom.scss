@@ -25,6 +25,27 @@ body {
   margin-right: auto;
 }
 
+// Tablet + landscape phones: don't pin left sidebar (Quartz default is sticky 100vh)
+@media (max-width: 1200px) {
+  .page > #quartz-body .sidebar.left {
+    position: relative;
+    height: auto;
+    max-height: none;
+    padding-top: 1rem;
+  }
+}
+
+// Mobile: keep toolbar row compact
+@media (max-width: 800px) {
+  .page > #quartz-body .sidebar.left {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
 .page-title,
 .page-title a {
   font-family: "Noto Sans Old Persian", "Segoe UI Historic", serif;
