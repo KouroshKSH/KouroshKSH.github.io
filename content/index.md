@@ -3,13 +3,8 @@ title: Kourosh
 description: ML engineer and researcher.
 ---
 
-<div class="landing-header">
-<div class="profile-sigil-wrap">
-<img src="/static/eagle.gif" alt="Achaemenid eagle sigil" class="profile-sigil" width="140" height="140" />
-</div>
-<div>
-<span class="cuneiform">𐎠𐎥𐎥𐎠𐎥</span>
-</div>
+<div class="landing-hero">
+<img src="/static/eagle_red.gif" alt="Achaemenid eagle sigil" class="landing-hero-gif" />
 </div>
 
 *Dorood.* My name is Kourosh Sharifi, ML Master's student at University of Tübingen and ML Engineer at Heimat Software GmbH.

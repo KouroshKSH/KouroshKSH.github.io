@@ -25,42 +25,23 @@ body {
   margin-right: auto;
 }
 
-.landing-header {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
+.page-title,
+.page-title a {
+  font-family: "Noto Sans Old Persian", "Segoe UI Historic", serif;
+  letter-spacing: 0.05em;
+}
+
+.landing-hero {
+  width: 100%;
   margin-bottom: 1.75rem;
 }
 
-.profile-sigil-wrap {
-  width: 140px;
-  height: 140px;
-  flex-shrink: 0;
-  border-radius: 6px;
-  overflow: hidden;
-  background: #000000;
-}
-
-.profile-sigil {
+.landing-hero-gif {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: auto;
+  display: block;
   image-rendering: pixelated;
-  display: block;
-}
-
-.landing-header .cuneiform {
-  margin: 0;
-}
-
-.cuneiform {
-  display: block;
-  font-family: "Noto Sans Old Persian", "Segoe UI Historic", serif;
-  font-size: 1.1rem;
-  color: var(--gray);
-  margin-top: -0.5rem;
-  margin-bottom: 1.5rem;
-  letter-spacing: 0.05em;
+  border-radius: 4px;
 }
 
 footer .footer-cuneiform,

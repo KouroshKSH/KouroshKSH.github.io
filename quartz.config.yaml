@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Kourosh
+  pageTitle: "𐎠𐎥𐎥𐎠𐎥"
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true

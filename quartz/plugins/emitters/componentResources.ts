@@ -90,6 +90,13 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
     componentResources.css.push(popoverStyle)
   }
 
+  componentResources.beforeDOMLoaded.push(`
+    const oldPersianFont = document.createElement("link");
+    oldPersianFont.rel = "stylesheet";
+    oldPersianFont.href = "https://fonts.googleapis.com/css2?family=Noto+Sans+Old+Persian&display=swap";
+    document.head.appendChild(oldPersianFont);
+  `)
+
   componentResources.afterDOMLoaded.push(`
     const HINT_DURATION_MS = 4500;
     const removeReaderModeHint = () => document.querySelector(".reader-mode-hint")?.remove();
