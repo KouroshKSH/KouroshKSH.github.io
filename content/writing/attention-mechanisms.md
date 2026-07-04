@@ -3,9 +3,9 @@ title: Attention Mechanisms
 description: Scaled dot-product attention and why it works.
 date: 2025-06-15
 tags:
-  - ml
-  - transformers
-  - math
+  - ML
+  - Transformers
+  - Math
 draft: false
 ---
 
@@ -13,7 +13,7 @@ draft: false
 
 Attention lets a model dynamically weight which parts of the input matter for each output position. It's the heart of the [[transformer-architecture|Transformer Architecture]].
 
-## scaled dot-product attention
+## Scaled Dot-Product Attention
 
 For queries $Q$, keys $K$, and values $V$:
 
@@ -23,14 +23,14 @@ $$
 
 The scaling factor $\sqrt{d_k}$ keeps dot products from growing too large before softmax, which would push gradients toward zero.
 
-## multi-head attention
+## Multi-Head Attention
 
 Multiple heads let the model attend to different relationship types in parallel — syntax in one head, coreference in another, and so on.
 
 > [!note] Intuition
 > Think of attention as a soft lookup: each query asks "which keys are relevant?" and pulls a weighted blend of values.
 
-## code sketch
+## Code Sketch
 
 ```python
 import torch
@@ -43,9 +43,9 @@ def scaled_dot_product_attention(q, k, v):
     return torch.matmul(weights, v)
 ```
 
-## related
+## Related
 
 - [[transformer-architecture]]
-- [[embeddings-and-retrieval]] — where attention outputs often end up as retrievable vectors
+- [[embeddings-and-retrieval]]
 
-← [[writing/index|all writing]]
+← [[writing/index|All writing]]

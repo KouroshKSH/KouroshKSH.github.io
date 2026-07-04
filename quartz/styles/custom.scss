@@ -15,8 +15,6 @@ body {
   color: #ffffff;
 }
 
-// Limit reading width on article content only — NOT on #quartz-body grid
-// (80ch on the grid crushes the center column between 320px sidebars)
 .page > #quartz-body .center {
   max-width: 80ch;
 }
@@ -25,6 +23,25 @@ body {
 .page > #quartz-body .center > .page-header {
   margin-left: auto;
   margin-right: auto;
+}
+
+.landing-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.profile-sigil {
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+  image-rendering: pixelated;
+  border-radius: 4px;
+}
+
+.landing-header .cuneiform {
+  margin: 0;
 }
 
 .cuneiform {
@@ -37,14 +54,8 @@ body {
   letter-spacing: 0.05em;
 }
 
-.hero-sigil {
-  display: block;
-  max-width: 280px;
-  margin: 0 auto 2rem;
-  image-rendering: pixelated;
-}
-
-blockquote {
+// Red accent for markdown quotes only — not Obsidian callouts (they have their own colors)
+blockquote:not(.callout) {
   border-left: 3px solid var(--persian-red);
   background: rgba(139, 38, 53, 0.06);
   padding-left: 1rem;
@@ -59,7 +70,7 @@ hr {
   border-color: var(--lightgray);
 }
 
-.callout[data-callout="quote"] {
-  --color: var(--persian-red);
-  --border: var(--persian-red-dim);
+article[data-slug="index"] .content-meta,
+article[data-slug="index"] .article-title {
+  display: none;
 }

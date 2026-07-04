@@ -7,6 +7,7 @@ tsconfig.tsbuildinfo
 .obsidian
 .quartz-cache
 private/
+.momento/
 .replit
 replit.nix
 .quartz/

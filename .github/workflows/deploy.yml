@@ -45,6 +45,23 @@ jobs:
         run: npx quartz plugin install
       - name: Build Quartz
         run: npx quartz build
+      - name: Verify build output
+        run: |
+          if [ ! -d public ]; then
+            echo "::error::public directory not found"
+            exit 1
+          fi
+          if [ ! -f public/index.html ]; then
+            echo "::error::public/index.html not found"
+            find public -type f | head -50
+            exit 1
+          fi
+          if [ -f public/CNAME ]; then
+            echo "::warning::CNAME file present — remove for username.github.io sites unless using a custom domain"
+            cat public/CNAME
+          fi
+          echo "Build OK: $(find public -type f | wc -l) files"
+          ls -lh public/static/eagle.png 2>/dev/null || echo "No eagle.png in static/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
