@@ -1,17 +1,9 @@
-# Quartz v5
+![𐎠𐎥𐎥𐎠𐎥](quartz/static/eagle_static_banner.png)
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+*Dorood.* ML Master's student at the University of Tübingen and ML Engineer at Heimat Software GmbH. B.Sc. in Computer Science with a minor in Mathematics from Sabancı University.
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
+Co-founded the first [AI Club](https://kaisabanci.com/) at Sabancı University. Co-authored a paper accepted at [ICML 2024](https://icml.cc/virtual/2024/39024) with Yale University. Former data scientist at Buluttan (renewable energy forecasting, Istanbul).
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
+[Website](https://kouroshksh.github.io) · [GitHub](https://github.com/KouroshKSH) · [LinkedIn](https://linkedin.com/in/kouroshsharifi) · [Medium](https://medium.com/@kourosh.sharifi) · [Google Scholar](https://scholar.google.com/citations?user=JKDX3nwAAAAJ&hl=en) · [CV](https://drive.google.com/drive/folders/1QEZ-ZxnaxAHb7byMuFl8u97vk6nPfA84?usp=drive_link) · [Linktree](https://linktr.ee/kourosh.sharifi)
 
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
-
-## Sponsors
-
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
+`Python` · `C++` · `Java` · `LaTeX` · `Linux` · `Git` · `Jupyter` · `Obsidian`
