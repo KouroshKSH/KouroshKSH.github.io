@@ -5,7 +5,7 @@ Graph-based technical blog built with [Quartz v5](https://quartz.jzhao.xyz/). Li
 ## Quick start
 
 ```bash
-cd /Users/kouroshsharifi/Documents/github/khodam/KouroshKSH.github.io
+cd .../KouroshKSH.github.io
 nvm use 22
 npm ci
 npx quartz plugin install --from-config
