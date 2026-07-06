@@ -15,32 +15,228 @@ body {
   color: #ffffff;
 }
 
-.page {
-  #quartz-body {
-    max-width: 80ch;
-    margin: 0 auto;
+.page > #quartz-body .center {
+  max-width: 80ch;
+}
+
+.page > #quartz-body .center > article,
+.page > #quartz-body .center > .page-header {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Tablet + landscape phones: don't pin left sidebar (Quartz default is sticky 100vh)
+@media (max-width: 1200px) {
+  .page > #quartz-body .sidebar.left {
+    position: relative;
+    height: auto;
+    max-height: none;
+    padding-top: 1rem;
   }
 }
 
-// Old Persian: fallback to system historic fonts if web font unavailable
-.cuneiform {
-  display: block;
+// Mobile: keep toolbar row compact
+@media (max-width: 800px) {
+  .page > #quartz-body .sidebar.left {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
+.page-title,
+.page-title a {
   font-family: "Noto Sans Old Persian", "Segoe UI Historic", serif;
-  font-size: 1.1rem;
-  color: var(--gray);
-  margin-top: -0.5rem;
-  margin-bottom: 1.5rem;
   letter-spacing: 0.05em;
 }
 
-.hero-sigil {
+.landing-hero {
+  width: 100%;
+  margin-bottom: 1.75rem;
+}
+
+.landing-hero-gif {
+  width: 100%;
+  height: auto;
   display: block;
-  max-width: 280px;
-  margin: 0 auto 2rem;
   image-rendering: pixelated;
 }
 
-blockquote {
+.landing-hero-gif-light {
+  display: none;
+}
+
+:root[saved-theme="light"] .landing-hero-gif-dark {
+  display: none;
+}
+
+:root[saved-theme="light"] .landing-hero-gif-light {
+  display: block;
+}
+
+footer .footer-cuneiform,
+footer p::after {
+  font-family: "Noto Sans Old Persian", "Segoe UI Historic", serif;
+  color: var(--gray);
+  letter-spacing: 0.05em;
+  margin-left: 0.35rem;
+}
+
+footer p::after {
+  content: " \103A0\103A5\103A5\103A0\103A5";
+}
+
+footer p:has(.footer-cuneiform)::after {
+  content: none;
+}
+
+// Tag display: # prefix, uppercase abbreviations (ml → #ML, nlp → #NLP)
+a.tag-link {
+  &::before {
+    content: "#";
+  }
+}
+
+a.tag-link[href*="tags/ml"],
+a.tag-link[href*="tags/nlp"] {
+  text-transform: uppercase;
+}
+
+// All callouts use Persian red accent (override per-type defaults in callouts.scss)
+.callout[data-callout],
+.callout[data-callout="note"],
+.callout[data-callout="abstract"],
+.callout[data-callout="info"],
+.callout[data-callout="todo"],
+.callout[data-callout="tip"],
+.callout[data-callout="success"],
+.callout[data-callout="question"],
+.callout[data-callout="warning"],
+.callout[data-callout="failure"],
+.callout[data-callout="danger"],
+.callout[data-callout="bug"],
+.callout[data-callout="example"],
+.callout[data-callout="quote"] {
+  --color: var(--persian-red);
+  --border: rgba(139, 38, 53, 0.45);
+  --bg: rgba(139, 38, 53, 0.08);
+}
+
+// Reader mode edge hint
+.reader-mode-hint {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 2.5rem;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+
+  &.visible {
+    opacity: 1;
+  }
+
+  p {
+    margin: 0;
+    padding: 0.5rem 0.85rem;
+    font-size: 0.85rem;
+    color: var(--darkgray);
+    background: var(--light);
+    border: 1px solid var(--lightgray);
+    border-radius: 4px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.reader-mode-hint-edges {
+  position: absolute;
+  inset: 0;
+}
+
+.reader-mode-hint-edge {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--persian-red);
+  opacity: 0;
+  animation: reader-hint-nudge 1.4s ease-in-out 2;
+
+  svg {
+    display: block;
+    filter: drop-shadow(0 0 6px rgba(139, 38, 53, 0.35));
+  }
+}
+
+.reader-mode-hint-left {
+  left: 0.35rem;
+}
+
+.reader-mode-hint-right {
+  right: 0.35rem;
+}
+
+@keyframes reader-hint-nudge {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translateY(-50%) translateX(0);
+  }
+  20%,
+  80% {
+    opacity: 0.85;
+  }
+  50% {
+    transform: translateY(-50%) translateX(var(--nudge, 6px));
+  }
+}
+
+.reader-mode-hint-left {
+  --nudge: 8px;
+  animation-name: reader-hint-nudge-left;
+}
+
+.reader-mode-hint-right {
+  --nudge: -8px;
+  animation-name: reader-hint-nudge-right;
+}
+
+@keyframes reader-hint-nudge-left {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translateY(-50%) translateX(0);
+  }
+  20%,
+  80% {
+    opacity: 0.85;
+  }
+  50% {
+    transform: translateY(-50%) translateX(8px);
+  }
+}
+
+@keyframes reader-hint-nudge-right {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translateY(-50%) translateX(0);
+  }
+  20%,
+  80% {
+    opacity: 0.85;
+  }
+  50% {
+    transform: translateY(-50%) translateX(-8px);
+  }
+}
+
+// Red accent for markdown quotes only — not Obsidian callouts (they have their own colors)
+blockquote:not(.callout) {
   border-left: 3px solid var(--persian-red);
   background: rgba(139, 38, 53, 0.06);
   padding-left: 1rem;
@@ -55,12 +251,7 @@ hr {
   border-color: var(--lightgray);
 }
 
-article[data-slug="index"] ~ .sidebar.right,
-body[data-slug="index"] .sidebar.right {
+article[data-slug="index"] .content-meta,
+article[data-slug="index"] .article-title {
   display: none;
-}
-
-.callout[data-callout="quote"] {
-  --color: var(--persian-red);
-  --border: var(--persian-red-dim);
 }

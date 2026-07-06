@@ -1,39 +1,28 @@
 ---
 title: Kourosh
-description: ML engineer and researcher. Technical notes on AI, systems, and scientific discovery.
+description: ML engineer and researcher.
 ---
 
-# Kourosh
+<div class="landing-hero">
+<img src="/static/eagle_red_dark.gif" alt="Achaemenid eagle sigil" class="landing-hero-gif landing-hero-gif-dark" />
+<img src="/static/eagle_red_light.gif" alt="Achaemenid eagle sigil" class="landing-hero-gif landing-hero-gif-light" />
+</div>
 
-<span class="cuneiform">𐎠𐎥𐎥𐎠𐎥</span>
+_Dorood._ My name is Kourosh Sharifi, ML Master's student at University of [Tübingen](https://uni-tuebingen.de/en/study/finding-a-course/degree-programs-available/detail/course/machine-learning-master/) and ML Engineer at [Heimat](https://heimat-software.com/) Software GmbH.
 
-![Achaemenid eagle sigil](/static/eagle-placeholder.svg){.hero-sigil}
+[GitHub](https://github.com/KouroshKSH) · [LinkedIn](https://linkedin.com/in/kouroshsharifi) · [Google Scholar](https://scholar.google.com/citations?user=xSJ_bIYAAAAJ&hl=en) · [CV](https://drive.google.com/drive/folders/1QEZ-ZxnaxAHb7byMuFl8u97vk6nPfA84?usp=drive_link) · [Linktree](https://linktr.ee/kourosh.sharifi)
 
-ML Master's student at University of Tübingen. ML Engineer at Heimat Software GmbH.
-Passionate about AI for scientific discovery and real-world systems.
+## Writing
 
-[GitHub](https://github.com/KouroshKSH) · [LinkedIn](https://linkedin.com/in/kouroshsharifi) · [Linktree](https://linktr.ee/kourosh.sharifi)
+Technical notes (mostly ML):
 
-## writing
+-> [[writing/index|All notes]]
 
-Technical notes on ML, systems, and whatever I'm learning.
+## Experience
 
-→ [[writing/index|all notes]]
+-> [[experience|Work, education & background]]
 
-## experience
+## Publications
 
-→ [[experience|work & background]]
-
-## publications
-
-- [Enhancing Ottoman Word Recognition via Self-Supervised Pretraining Using a Siamese Swin Transformer (SIU 2025)](https://ieeexplore.ieee.org/document/11112258)
-- [STRIDE: A Tool-Assisted LLM Agent Framework for Strategic and Interactive Decision-Making (ICML AutoRL 2024)](https://icml.cc/virtual/2024/35866)
-
-## this year's goals
-
-- ship more technical writing
-- read more books
-- deepen German
-
----
-© 2026 <span class="cuneiform">𐎠𐎥𐎥𐎠𐎥</span>
+- [Ottoman Word Recognition via Siamese Swin Transformer (SIU 2025)](https://ieeexplore.ieee.org/document/11112258)
+- [STRIDE: LLM Agent Framework (ICML AutoRL 2024)](https://icml.cc/virtual/2024/35866)

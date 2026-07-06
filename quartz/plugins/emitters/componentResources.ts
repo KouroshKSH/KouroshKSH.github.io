@@ -90,6 +90,38 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
     componentResources.css.push(popoverStyle)
   }
 
+  componentResources.beforeDOMLoaded.push(`
+    const oldPersianFont = document.createElement("link");
+    oldPersianFont.rel = "stylesheet";
+    oldPersianFont.href = "https://fonts.googleapis.com/css2?family=Noto+Sans+Old+Persian&display=swap";
+    document.head.appendChild(oldPersianFont);
+  `)
+
+  componentResources.afterDOMLoaded.push(`
+    const HINT_DURATION_MS = 4500;
+    const removeReaderModeHint = () => document.querySelector(".reader-mode-hint")?.remove();
+    const showReaderModeHint = () => {
+      if (document.documentElement.getAttribute("reader-mode") !== "on") return;
+      removeReaderModeHint();
+      const hint = document.createElement("div");
+      hint.className = "reader-mode-hint";
+      hint.setAttribute("role", "status");
+      hint.setAttribute("aria-live", "polite");
+      hint.innerHTML = '<div class="reader-mode-hint-edges" aria-hidden="true"><span class="reader-mode-hint-edge reader-mode-hint-left"><svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M15 6l-6 6 6 6"/></svg></span><span class="reader-mode-hint-edge reader-mode-hint-right"><svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M9 6l6 6-6 6"/></svg></span></div><p>Hover the left or right edge for side panels</p>';
+      document.body.appendChild(hint);
+      requestAnimationFrame(() => hint.classList.add("visible"));
+      window.setTimeout(() => {
+        hint.classList.remove("visible");
+        window.setTimeout(() => hint.remove(), 700);
+      }, HINT_DURATION_MS);
+    };
+    document.addEventListener("readermodechange", (event) => {
+      const mode = event.detail?.mode;
+      if (mode === "on") showReaderModeHint();
+      else removeReaderModeHint();
+    });
+  `)
+
   if (cfg.analytics?.provider === "google") {
     const tagId = cfg.analytics.tagId
     componentResources.afterDOMLoaded.push(`

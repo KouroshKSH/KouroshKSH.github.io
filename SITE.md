@@ -41,11 +41,15 @@ Commit images to git — they deploy with the site. Do not hotlink to `raw.githu
 
 ## Replace the eagle sigil
 
-Drop your dithered GIF/PNG into `quartz/static/` (e.g. `eagle.gif`) and update the image path in `content/index.md`:
+Copy your dithered eagle PNG into the repo (recommended over the 40MB GIF):
 
-```markdown
-![Achaemenid eagle sigil](/static/eagle.gif){.hero-sigil}
+```bash
+cp ~/Downloads/ascii-magic-3.png quartz/static/eagle.png
+# optional: resize for faster loads
+sips -Z 560 quartz/static/eagle.png
 ```
+
+The landing page already references `/static/eagle.png`. Use the static PNG for now; swap in a smaller GIF later if you want animation.
 
 ## Remaining TODOs (manual)
 
